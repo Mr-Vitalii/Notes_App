@@ -1,0 +1,16 @@
+
+
+
+.hiddenDiv {
+    visibility: hidden;
+}
+
+.noteContainer {
+    margin-bottom: 20px;
+}
+
+.noteForm {
+    display: flex;
+}
+
+
