@@ -1,7 +1,9 @@
 @import "~normalize.css";
 @import "../utils/variables.scss";
 
-body {
+body {}
+
+.main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +20,7 @@ body {
     background: url(../../assets/images/bg-desktop-light.jpg) no-repeat top;
 }
 
-.container {
+.notes-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

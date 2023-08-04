@@ -10,43 +10,42 @@
 
 <body>
 
-    <header>
-        <div class="header">
-            <div>
-                <h1 class="header__title">Super Notes App</h1>
-                <p class="header__text">your personal assistant</p>
-            </div>
-        </div>
-    </header>
-
-    <main>
-
-        <div class="container">
-
-            <div class="notes-table">
-                <div class="notes-table__header">
-                    <div class="notes-table__header-item">Name</div>
-                    <div class="notes-table__header-item">Created</div>
-                    <div class="notes-table__header-item">Category</div>
-                    <div class="notes-table__header-item">Content</div>
-                    <div class="notes-table__header-item">Dates</div>
-                    <div class="notes-table__header-actions">
-                        <button id="mainButton" class="notes-table__header-button">Main</button>
-                        <button id="archiveButton" class="notes-table__header-button">Archive</button>
-                    </div>
+    <div class="main-container">
+        <header>
+            <div class="header">
+                <div>
+                    <h1 class="header__title">Super Notes App</h1>
+                    <p class="header__text">your personal assistant</p>
                 </div>
-                <p class="notes-table__message">No new notes</p>
-                <p class="notes-table__message-archive">No notes in archive</p>
-
-                <div class="notes-table__list"></div>
-
-                <button id="create-button" class="create-button">Create Note</button>
             </div>
+        </header>
+
+        <main>
+
+            <div class="notes-container">
+
+                <div class="notes-table">
+                    <div class="notes-table__header">
+                        <div class="notes-table__header-item">Name</div>
+                        <div class="notes-table__header-item">Created</div>
+                        <div class="notes-table__header-item">Category</div>
+                        <div class="notes-table__header-item">Content</div>
+                        <div class="notes-table__header-item">Dates</div>
+                        <div class="notes-table__header-actions">
+                            <button id="mainMenuButton" class="notes-table__header-button">Main</button>
+                            <button id="archiveButton" class="notes-table__header-button">Archive</button>
+                        </div>
+                    </div>
+                    <p id="startMessage" class="notes-table__message">No notes</p>
+
+                    <div id="notesListContainer" class="notes-table__list"></div>
+
+                    <button id="createNoteButton" class="create-button">Create Note</button>
+                </div>
 
 
-            <div class="hiddenDiv">
-                <div id="noteContainer" class="noteContainer">
-                    <form id="noteForm" class="noteForm">
+                <div id="formContainer" class="form-container">
+                    <form id="noteForm" class="note-form">
                         <label for="nameInput">Name:</label>
                         <input name="name" type="text" id="nameInput" placeholder="Enter name" required>
                         <br>
@@ -64,38 +63,39 @@
                         <br>
 
                         <button class="addButton" type="submit">Submit</button>
+                        <button id="cancelButton" type="button">Cancel</button>
+
                     </form>
                 </div>
+
+                <div class="notes-table notes-table--summary">
+                    <div class="notes-table__header">
+                        <div class="notes-table__header-item notes-table__header-item--summary">Note category</div>
+                        <div class="notes-table__header-item notes-table__header-item--summary">Active</div>
+                        <div class="notes-table__header-item notes-table__header-item--summary">Archived</div>
+                    </div>
+                    <div class="notes-table__row">
+                        <div class="notes-table__item notes-table__item--summary">Task</div>
+                        <div id="tasks-active" class="notes-table__item notes-table__item--summary"></div>
+                        <div id="tasks-archived" class="notes-table__item notes-table__item--summary"></div>
+                    </div>
+                    <div class="notes-table__row">
+                        <div class="notes-table__item notes-table__item--summary"">Random Thought</div>
+                    <div id="thought-active" class="notes-table__item notes-table__item--summary"></div>
+                        <div id="thought-archived" class="notes-table__item notes-table__item--summary"></div>
+                    </div>
+                    <div class="notes-table__row">
+                        <div class="notes-table__item notes-table__item--summary">Idea</div>
+                        <div id="idea-active" class="notes-table__item notes-table__item--summary"></div>
+                        <div id="idea-archived" class="notes-table__item notes-table__item--summary"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="notes-table notes-table--summary">
-                <div class="notes-table__header">
-                    <div class="notes-table__header-item notes-table__header-item--summary">Note category</div>
-                    <div class="notes-table__header-item notes-table__header-item--summary">Active</div>
-                    <div class="notes-table__header-item notes-table__header-item--summary">Archived</div>
-                </div>
-                <div class="notes-table__row">
-                    <div class="notes-table__item notes-table__item--summary">Task</div>
-                    <div id="tasks-active" class="notes-table__item notes-table__item--summary"></div>
-                    <div id="tasks-archived" class="notes-table__item notes-table__item--summary"></div>
-                </div>
-                <div class="notes-table__row">
-                    <div class="notes-table__item notes-table__item--summary"">Random Thought</div>
-            <div id="thought-active" class="notes-table__item notes-table__item--summary"></div>
-                    <div id="thought-archived" class="notes-table__item notes-table__item--summary"></div>
-                </div>
-                <div class=" notes-table__row">
-                    <div class="notes-table__item notes-table__item--summary">Idea</div>
-                    <div id="idea-active" class="notes-table__item notes-table__item--summary"></div>
-                    <div id="idea-archived" class="notes-table__item notes-table__item--summary"></div>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <span class="footer">Copyright &copy; 2023. All rights reserved.</span>
-        </footer>
-
+            <footer>
+                <span class="footer">Copyright &copy; 2023. All rights reserved.</span>
+            </footer>
+    </div>
     </main>
 
 </body>

@@ -8,4 +8,4 @@ const getCurrentDate = () => {
     return currentDate;
 };
 
-export default getCurrentDate;
+export {getCurrentDate};

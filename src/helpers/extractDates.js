@@ -1,12 +1,16 @@
 
 const extractDates = (content) => {
-    if (content) {
-        const datePattern = /(?:\d{2}[./]\d{2}[./]\d{4})/g;
-        const datesFound = content.match(datePattern);
-        return datesFound || [];
+    if (typeof content !== 'string') {
+        throw new Error('Invalid input. Expected a string.');
     }
-    return [];
+
+    if (!content) {
+        return [];
+    }
+
+    const datePattern = /(?:\d{2}[./]\d{2}[./]\d{4})/g;
+    const datesFound = content.match(datePattern);
+    return datesFound || [];
 };
 
-export default extractDates;
-
+export {extractDates};
