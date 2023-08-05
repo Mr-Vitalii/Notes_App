@@ -1,5 +1,6 @@
 {
-  "name": "todo",
+  "homepage": "https://mr-vitalii.github.io/Notes_App/",
+  "name": "notes_app",
   "version": "1.0.0",
   "description": "task_1",
   "private": true,
@@ -28,6 +29,7 @@
     "css-minimizer-webpack-plugin": "^5.0.1",
     "csv-loader": "^3.0.5",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "sass": "^1.63.4",
