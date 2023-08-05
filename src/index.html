@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <script src="https://kit.fontawesome.com/a68ff74283.js" crossorigin="anonymous"></script>
     <title>Notes App</title>
-
 </head>
 
 <body>
 
     <div class="main-container">
-        <header>
-            <div class="header">
-                <div>
-                    <h1 class="header__title">Super Notes App</h1>
-                    <p class="header__text">your personal assistant</p>
-                </div>
+        <header class="header">
+            <div>
+                <h1 class="header__title">Super Notes App</h1>
+                <p class="header__text">your personal assistant</p>
             </div>
         </header>
 
@@ -24,51 +22,51 @@
 
             <div class="notes-container">
 
-                <div class="notes-table">
+                <section class="notes-table">
                     <div class="notes-table__header">
                         <div class="notes-table__header-item">Name</div>
                         <div class="notes-table__header-item">Created</div>
                         <div class="notes-table__header-item">Category</div>
                         <div class="notes-table__header-item">Content</div>
                         <div class="notes-table__header-item">Dates</div>
-                        <div class="notes-table__header-actions">
-                            <button id="mainMenuButton" class="notes-table__header-button">Main</button>
-                            <button id="archiveButton" class="notes-table__header-button">Archive</button>
-                        </div>
+                        <nav class="notes-table__header-actions">
+                            <button id="mainMenuButton" class="button button--header"><i
+                                    class="fa-solid fa-house"></i></button>
+                            <button id="archiveButton" class="button button--header"><i
+                                    class="fa-solid fa-boxes-packing"></button>
+                            <button id="deleteAllButton" class="button button--header"><i
+                                    class="fa-solid fa-trash"></i></button>
+                        </nav>
                     </div>
                     <p id="startMessage" class="notes-table__message">No notes</p>
 
                     <div id="notesListContainer" class="notes-table__list"></div>
 
-                    <button id="createNoteButton" class="create-button">Create Note</button>
-                </div>
+                    <button id="createNoteButton" class="button button--create">Create Note</button>
+                </section>
 
 
-                <div id="formContainer" class="form-container">
+                <section id="formContainer" class="form-container">
                     <form id="noteForm" class="note-form">
                         <label for="nameInput">Name:</label>
-                        <input name="name" type="text" id="nameInput" placeholder="Enter name" required>
-                        <br>
-
+                        <input class="note-form__input" name="name" type="text" id="nameInput"
+                            placeholder="Enter name note" required>
                         <label for="categorySelect">Category:</label>
-                        <select name="category" id="categorySelect">
+                        <select class="note-form__select" name="category" id="categorySelect">
                             <option value="Task">Task</option>
                             <option value="Random Thought">Random Thought</option>
                             <option value="Idea">Idea</option>
                         </select>
-                        <br>
-
                         <label for="contentInput">Content:</label>
-                        <input name="content" type="text" id="contentInput" placeholder="Enter content" required>
-                        <br>
-
-                        <button class="addButton" type="submit">Submit</button>
-                        <button id="cancelButton" type="button">Cancel</button>
+                        <input class="note-form__input" name="content" type="text" id="contentInput"
+                            placeholder="Enter content note" required>
+                        <button class="button button--form" type="submit">Add</button>
+                        <button class="button button--form" id="cancelButton" type="button">Cancel</button>
 
                     </form>
-                </div>
+                </section>
 
-                <div class="notes-table notes-table--summary">
+                <section id="summaryTable" class="notes-table">
                     <div class="notes-table__header">
                         <div class="notes-table__header-item notes-table__header-item--summary">Note category</div>
                         <div class="notes-table__header-item notes-table__header-item--summary">Active</div>
@@ -89,7 +87,7 @@
                         <div id="idea-active" class="notes-table__item notes-table__item--summary"></div>
                         <div id="idea-archived" class="notes-table__item notes-table__item--summary"></div>
                     </div>
-                </div>
+                </section>
             </div>
 
             <footer>
@@ -97,7 +95,6 @@
             </footer>
     </div>
     </main>
-
 </body>
 
 </html>

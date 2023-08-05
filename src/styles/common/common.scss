@@ -1,7 +1,9 @@
 @import "~normalize.css";
 @import "../utils/variables.scss";
 
-body {}
+body {
+    background-color: $veryDarkBlue;
+}
 
 .main-container {
     display: flex;
@@ -15,9 +17,9 @@ body {}
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
-    background-color: $veryLightGray;
+    background-color: $darkGrayishBlue;
 
-    background: url(../../assets/images/bg-desktop-light.jpg) no-repeat top;
+    background: url(../../assets/images/bg-desktop-dark.jpg) no-repeat top;
 }
 
 .notes-container {

@@ -1,0 +1,55 @@
+@import "../utils/variables.scss";
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    color: $lightGrayishBlue;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.button--header {
+    background-color: transparent;
+    color: $light-hover;
+    width: 30px;
+    height: 30px;
+}
+
+.button--note {
+    background-color: transparent;
+    color: $light-hover;
+    width: 30px;
+    height: 30px;
+}
+
+.button--create {
+    padding: 10px 25px;
+    border-radius: 4px;
+
+    margin-left: auto;
+    margin-bottom: 20px;
+
+    background-color: $darkGrayishBlue;
+
+    &:hover {
+        color: $light-hover;
+        box-shadow: 0 0 20px 10px $light-hover;
+        transition: box-shadow 0.3s;
+    }
+}
+
+.button--form {
+    padding: 10px 25px;
+    border-radius: 4px;
+    background-color: $darkGrayishBlue;
+
+    &:hover {
+        color: $light-hover;
+        box-shadow: 0 0 20px 10px $light-hover;
+        transition: box-shadow 0.3s;
+    }
+}

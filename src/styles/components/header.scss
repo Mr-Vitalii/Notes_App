@@ -2,10 +2,10 @@
 
 
 .header {
-    
+
     &__title {
         margin: 0;
-        color: $white-color;
+        color: $lightGrayishBlue;
         text-transform: uppercase;
         font-weight: 400;
         letter-spacing: 1px;
@@ -15,7 +15,8 @@
     &__text {
         margin: 0;
         margin-bottom: 10px;
-        color: $white-color;
+        color: $lightGrayishBlue;
+        text-align: center;
         text-transform: uppercase;
         font-weight: 400;
         font-size: 14px;

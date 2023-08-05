@@ -11,14 +11,14 @@ const notesList = [
         id: "f8e35a19-1041-4244-8a6c-b3bb1b08f3d1",
         name: "Vacation destination",
         category: "Idea",
-        content: "Hawaii seems like a great place to visit!",
+        content: "Hawaii seems like a great place to visit from 08/15/2023 to 08/23/2023",
         isArchived: false,
     },
     {
         id: "b9e0a992-201d-4c80-8e63-7c60ad7749c1",
         name: "Call Mom",
         category: "Task",
-        content: "Wish her a happy birthday",
+        content: "Wish her a happy birthday 08/17/2023",
         isArchived: false,
     },
     {

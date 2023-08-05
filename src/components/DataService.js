@@ -1,4 +1,5 @@
 
+import { showToast } from '../helpers';
 
 export default class DataService {
     constructor(notesList) {
@@ -31,7 +32,6 @@ export default class DataService {
 
     archiveNote(note) {
         const noteIndex = this.notes.findIndex(el => el.id === note.id);
-        if (noteIndex !== -1) {
             if (this.notes[noteIndex].isArchived === false) {
                 this.notes[noteIndex].isArchived = true;
                 this.calculateNoteStats(note)
@@ -39,11 +39,6 @@ export default class DataService {
             } else {
                 this.returnFromArchive(note);
             }
-
-        } else {
-            alert('Note not found!');
-            return null;
-        }
     }
 
     returnFromArchive(note) {
@@ -55,16 +50,11 @@ export default class DataService {
 
     editNote(note, name, category, content) {
         const noteIndex = this.notes.findIndex(el => el.id === note.id);
-        if (noteIndex !== -1) {
             this.notes[noteIndex] = { ...this.notes[noteIndex], name, category, content };
             document.dispatchEvent(
                 new Event(note.isArchived ? 'notesArchiveChanged' : 'notesChanged')
             );
             return this.notes[noteIndex];
-        } else {
-            alert('Note not found!');
-            return null;
-        }
     }
 
     calculateNoteStats(note) {
@@ -90,5 +80,20 @@ export default class DataService {
         document.dispatchEvent(
             new Event(note.isArchived ? 'notesArchiveChanged' : 'notesChanged')
         );
+    }
+
+    clearAll() {
+        if (this.notes.length === 0) {
+            showToast("No notes to delete!");
+            return
+        }
+        const userConfirmed = window.confirm("When you click on the 'OK' button, all notes will be deleted. Do you want to continue?");
+        if (userConfirmed) {
+            this.notes = [];
+            document.dispatchEvent(
+                new Event('notesChanged')
+            );
+            showToast("All notes deleted!");
+        } 
     }
 }

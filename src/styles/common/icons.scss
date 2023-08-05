@@ -1,0 +1,12 @@
+@import "../utils/variables.scss";
+
+.fa-solid {
+    font-size: 16px;
+    background-color: transparent;
+    color: $lightGrayishBlue;
+
+    &:hover,
+    &:focus {
+        color: $light-hover;
+    }
+}
