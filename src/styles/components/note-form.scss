@@ -1,0 +1,29 @@
+@import "../utils/variables.scss";
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+.note-form {
+    visibility: hidden;
+    display: flex;
+    color: $lightGrayishBlue;
+    column-gap: 10px;
+    align-items: center;
+    font-size: 16px;
+
+    &__input {
+        padding: 8px;
+        border-radius: 4px;
+        outline: none;
+        background-color: $darkGrayishBlue;
+        color: $lightGrayishBlue;
+    }
+
+    &__select {
+        padding: 8px;
+        border-radius: 4px;
+        background-color: $darkGrayishBlue;
+        color: $lightGrayishBlue;
+    }
+}
